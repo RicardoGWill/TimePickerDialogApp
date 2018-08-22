@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     Button timePickerDialogButton;
     static final int DIALOG_ID = 0;
     int hourX;
-    int hourY;
     int minuteX;
 
     public void timePickerDialogButtonOnClick() {
