@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected Dialog onCreateDialog(int id) {
         if (id == DIALOG_ID) {
-            return new TimePickerDialog(MainActivity.this, timePickerListener, hourX, minuteX, false);
+            return new TimePickerDialog(MainActivity.this, onTimeSetListener, hourX, minuteX, false);
         } else {
             return null;
         }
     }
 
-    protected TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+    protected TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             // The reason for much of the lunacy before the Toast is to convert
